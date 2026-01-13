@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>UrbanStyle</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+}
+
+/* NAVBAR */
+nav {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+nav ul li {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+}
+
+/* SECTIONS */
+section {
+    padding: 40px;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* HOME */
+.banner {
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* PRODUCTS */
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background: white;
+    width: 230px;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.product img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.product h4 {
+    color: #ff416c;
+}
+
+.product button {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* BUY NOW */
+.buy-btn {
+    background: linear-gradient(90deg, #36d1dc, #5b86e5);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>UrbanStyle</h2>
+    <ul>
+        <li onclick="showSection('home')">Home</li>
+        <li onclick="showSection('men')">Men</li>
+        <li onclick="showSection('women')">Women</li>
+        <li onclick="showSection('accessories')">Accessories</li>
+        <li onclick="showSection('cart')">Cart</li>
+        <li onclick="showSection('contact')">Contact</li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+    <div class="banner">
+        <h1>Welcome to UrbanStyle</h1>
+        <p>Fashion that fits your style</p>
+    </div>
+</section>
+
+<!-- MEN (3 PRODUCTS) -->
+<section id="men" style="display:none;">
+<h2>Men Collection</h2>
+<div class="products">
+
+<div class="product">
+<img src="C:\Users\Jeevan\Downloads\Winter Smart Casual Jacket.jpeg">
+<h4>Men T-Shirt</h4>
+<p>₹799</p>
+<button onclick="addToCart('Men T-Shirt')">Add to Cart</button>
+<button class="buy-btn" onclick="buyNow('Men T-Shirt')">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="C:\Users\Jeevan\Downloads\Men Stretch Skinny Jeans - 109Blue _ 31.jpeg">
+<h4>Men Jeans</h4>
+<p>₹1699</p>
+<button onclick="addToCart('Men Jeans')">Add to Cart</button>
+<button class="buy-btn" onclick="buyNow('Men Jeans')">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="C:\Users\Jeevan\Downloads\COATS & JACKETS.jpeg">
+<h4>Men Jacket</h4>
+<p>₹2999</p>
+<button onclick="addToCart('Men Jacket')">Add to Cart</button>
+<button class="buy-btn" onclick="buyNow('Men Jacket')">Buy Now</button>
+</div>
+
+</div>
+</section>
+
+<!-- WOMEN (3 PRODUCTS) -->
+<section id="women" style="display:none;">
+<h2>Women Collection</h2>
+<div class="products">
+
+<div class="product">
+<img src="C:\Users\Jeevan\Downloads\Penelope - Stylish trench coat.jpeg">
+<h4>Dress</h4>
+<p>₹1599</p>
+<button onclick="addToCart('Women Dress')">Add to Cart</button>
+<button class="buy-btn" onclick="buyNow('Women Dress')">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="C:\Users\Jeevan\Downloads\Amaira_ Buy Amaira Designer Sarees, Lehengas, Anarkalis 2025.jpeg">
+<h4>Top</h4>
+<p>₹999</p>
+<button onclick="addToCart('Women Top')">Add to Cart</button>
+<button class="buy-btn" onclick="buyNow('Women Top')">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="C:\Users\Jeevan\Downloads\Rust Lehenga Choli With Dupatta_ Indian Bridal Party Wear - Etsy.jpeg">
+<h4>Saree</h4>
+<p>₹2199</p>
+<button onclick="addToCart('Women Saree')">Add to Cart</button>
+<button class="buy-btn" onclick="buyNow('Women Saree')">Buy Now</button>
+</div>
+
+</div>
+</section>
+
+<!-- ACCESSORIES (3 PRODUCTS) -->
+<section id="accessories" style="display:none;">
+<h2>Accessories</h2>
+<div class="products">
+
+<div class="product">
+<img src="C:\Users\Jeevan\Downloads\SetMyWed - Latest Wedding Ideas & Inspiration.jpeg">
+<h4>Earings</h4>
+<p>₹999</p>
+<button onclick="addToCart('Earings')">Add to Cart</button>
+<button class="buy-btn" onclick="buyNow('Earings')">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="C:\Users\Jeevan\Downloads\Bird in Bag – Women’s Luxurious Leather Handbag with Large Capacity and Crossbody Design.jpeg">
+<h4>Handbag</h4>
+<p>₹1399</p>
+<button onclick="addToCart('Handbag')">Add to Cart</button>
+<button class="buy-btn" onclick="buyNow('Handbag')">Buy Now</button>
+</div>
+
+<div class="product">
+<img src="C:\Users\Jeevan\Downloads\Buy Bangles Online at India Trend.jpeg">
+<h4>Bangles</h4>
+<p>₹1199</p>
+<button onclick="addToCart('Bangles')">Add to Cart</button>
+<button class="buy-btn" onclick="buyNow('Bangles')">Buy Now</button>
+</div>
+
+</div>
+</section>
+
+<!-- CART -->
+<section id="cart" style="display:none;">
+<h2>Your Cart</h2>
+<ul id="cartItems"></ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="display:none;">
+<h2>Contact Us</h2>
+<p>Email: urbanstyle@gmail.com</p>
+<p>Phone: 1001001503</p>
+<p>Location: Coimbatore, Tamil Nadu</p>
+</section>
+
+<script>
+function showSection(id) {
+    document.querySelectorAll("section").forEach(sec => sec.style.display = "none");
+    document.getElementById(id).style.display = "block";
+}
+
+function addToCart(item) {
+    const li = document.createElement("li");
+    li.textContent = item;
+    document.getElementById("cartItems").appendChild(li);
+    alert(item + " added to cart");
+}
+
+function buyNow(item) {
+    alert("Proceeding to buy " + item);
+}
+</script>
+
+</body>
+</html>
